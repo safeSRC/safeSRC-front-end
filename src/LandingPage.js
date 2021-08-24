@@ -29,7 +29,7 @@ export default class LandingPage extends Component {
           <button>Search</button>
         </form>
         <p>
-          lorem ipsum dolor sit amet, consectetur
+          A safer, community-based alternative to calling the police in emergency situations
         </p>
 
       </div>
