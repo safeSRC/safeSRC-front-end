@@ -2,9 +2,18 @@
   text-align: center;
 }
 
+body {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: black;
+  color: rgb(127, 177, 211);
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  margin-top: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
