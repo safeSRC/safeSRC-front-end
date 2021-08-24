@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import logo from './logo.png';
+import Categories from './Categories.js';
 
 export default class LandingPage extends Component {
 

@@ -13,6 +13,7 @@ body {
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  margin-top: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

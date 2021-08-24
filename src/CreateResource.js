@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { createResource } from './fetch-utils';
+import { createResource } from './utils';
 import './App.css';
 
 export default class CreatePage extends Component {
@@ -9,7 +9,7 @@ export default class CreatePage extends Component {
     city: '',
     city_id: 1,
     county: '',
-    zip: 12345,
+    zip: '',
     usstate: '',
     state_id: 1,
     number: '',

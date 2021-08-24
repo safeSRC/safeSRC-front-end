@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getAllResources } from './fetch-utils';
+import { getAllResources } from './utils';
 import { Link } from 'react-router-dom';
 
 export default class ListPage extends Component {
@@ -10,13 +10,13 @@ export default class ListPage extends Component {
   componentDidMount = async () => {
     const resourcelist = await getAllResources();
 
-    this.setState({ resource: resourcelist });
+    this.setState({resource: resourcelist});
   };
 
   render() {
     return (
       <div className="resourcelist">
-        {this.state.resource.map((resource) => (
+        {this.state.resource.map(resource => 
           <Link to={`/resource/${resource.id}`}>
             <div className="resource-info">
               <h2 className="name">{resource.name}</h2>
@@ -40,7 +40,7 @@ export default class ListPage extends Component {
               </section>
             </div>
           </Link>
-        ))}
+        )}
       </div>
     );
   }
