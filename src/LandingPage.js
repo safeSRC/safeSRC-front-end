@@ -10,7 +10,7 @@ export default class LandingPage extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
-    const resourcesAPI = await getResources()
+    // const resourcesAPI = await getResources()
   }
 
   handleInputChange = async (e) => {
