@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import logo from './logo.png';
+import Categories from './Categories.js';
 
 export default class LandingPage extends Component {
 
@@ -29,7 +31,7 @@ export default class LandingPage extends Component {
           <button>Search</button>
         </form>
         <p>
-          lorem ipsum dolor sit amet, consectetur
+          A safer, community-based alternative to calling the police in emergency situations
         </p>
 
       </div>
