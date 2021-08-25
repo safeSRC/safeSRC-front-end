@@ -25,7 +25,7 @@ export default class DetailPage extends Component {
     website: '',
     categories: [],
     category_id: 1,
-    subcategories: [],
+    tags: [],
   };
 
   componentDidMount = async () => {

@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import '../style/About.css';
+import logo from '../style/logo.png';
 
 export default class About extends Component {
       render() {
             return (
               <div>
+                <img className="App-logo" src={logo} alt="safeSRC logo" />
                 <p className="ben">
                   <h1>Ben</h1>
                   <p className="bio">hi</p>

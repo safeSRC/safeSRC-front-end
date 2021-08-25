@@ -22,7 +22,7 @@ export default class ListPage extends Component {
             <div className="resource-info">
               <h2 className="name">{resource.name}</h2>
               <h3 className="category">{resource.category}</h3>
-              <h4 className="subcategory">{resource.subcategory}</h4>
+              <h4 className="tags">{resource.tags}</h4>
 
               <section className="resource-address">
                 <p className="street-add">{resource.address}</p>

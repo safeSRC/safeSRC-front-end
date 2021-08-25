@@ -23,7 +23,7 @@ export default class Categories extends Component {
           <p className="examples">Sexual and domestic assault crisis lines and shelters, child protection services, crisis lines/shelters/resources for abuse (including specified resources for LGBTQ*, disabled, elderly, minor, vulnerable adult, and immigrant populations) advocacy for support in meeting with police after an assault, safe houses, robbery/theft reporting </p>
         </p>
         <p className="environmental">
-          <button className="env-btn">Environmental & Shelter</button>
+          <button className="env-shel-btn">Environmental & Shelter</button>
           <p className="examples">Homeless shelters, emergency housing resources, warming/cooling shelters, storm shelters, severe weather services, outage maps, locksmiths for lockouts, roadside assistance, transportation assistance</p>
         </p>
         <p className="animal">
