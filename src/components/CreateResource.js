@@ -4,8 +4,8 @@ import '../style/Create.css';
 
 export default class CreateResource extends Component {
   state = {
-    name: '',
-    address: '',
+    src_name: '',
+    st_address: '',
     city: '',
     city_id: 1,
     county: '',
@@ -21,12 +21,12 @@ export default class CreateResource extends Component {
     tags: '',
   };
 
-  handleNameChange = (e) => {
-    this.setState({ name: e.target.value });
+  handleSrcNameChange = (e) => {
+    this.setState({ src_name: e.target.value });
   };
 
-  handleAddressChange = (e) => {
-    this.setState({ address: e.target.value });
+  handleStAddressChange = (e) => {
+    this.setState({ st_address: e.target.value });
   };
 
   handleCityChange = (e) => {
@@ -73,8 +73,8 @@ export default class CreateResource extends Component {
     e.preventDefault();
 
     await createResource({
-      name: this.state.name,
-      address: this.state.address,
+      src_name: this.state.src_name,
+      st_address: this.state.st_address,
       city: this.state.city,
       city_id: this.state.city_id,
       usstate: this.state.usstate,
@@ -99,11 +99,11 @@ export default class CreateResource extends Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Name of Business:
-            <input onChange={this.handleNameChange} />
+            <input onChange={this.handleSrcNameChange} />
           </label>
           <label>
             Street Address:
-            <input type="address" onChange={this.handleAddressChange} />
+            <input type="address" onChange={this.handleStAddressChange} />
           </label>
           <label>
             City:

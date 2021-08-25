@@ -10,8 +10,8 @@ import '../style/Resources.css';
 
 export default class DetailPage extends Component {
   state = {
-    name: '',
-    address: '',
+    src_name: '',
+    st_address: '',
     cities: [],
     city_id: 1,
     zip: '',
@@ -34,8 +34,8 @@ export default class DetailPage extends Component {
     const categories = await getAllCategories();
 
     this.setState({
-      name: resource.name,
-      address: resource.address,
+      src_name: resource.src_name,
+      st_address: resource.st_address,
       city_id: resource.city_id,
       cities: cities,
       zip: resource.zip,
@@ -51,12 +51,12 @@ export default class DetailPage extends Component {
     });
   };
 
-  handleNameChange = (e) => {
-    this.setState({ name: e.target.value });
+  handlesrc_nameChange = (e) => {
+    this.setState({ src_name: e.target.value });
   };
 
-  handleAddressChange = (e) => {
-    this.setState({ address: e.target.value });
+  handleStAddressChange = (e) => {
+    this.setState({ st_address: e.target.value });
   };
 
   handleCityChange = (e) => {
@@ -105,8 +105,8 @@ export default class DetailPage extends Component {
   handleSubmit = async (e) => {
     e.preventDefault();
     await updateResource(this.props.match.params.id, {
-      name: this.state.name,
-      address: this.state.address,
+      src_name: this.state.src_name,
+      st_address: this.state.st_address,
       city: this.state.city,
       city_id: this.state.city_id,
       zip: this.state.zip,
@@ -135,15 +135,15 @@ export default class DetailPage extends Component {
             <input
               value={this.state.name}
               type="text"
-              onChange={this.handleNameChange}
+              onChange={this.handleSrcNameChange}
             />
           </label>
           <label>
             Street Address
             <input
-              value={this.state.address}
+              value={this.state.st_address}
               type="address"
-              onChange={this.handleAddressChange}
+              onChange={this.handleStAddressChange}
             />
           </label>
           <label>

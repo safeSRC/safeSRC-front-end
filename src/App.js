@@ -18,6 +18,12 @@ import UserPage from './components/UserPage.js';
 import Header from './components/Header.js';
 import Footer from './components/Footer.js';
 import Categories from './components/Categories.js';
+import IllnessInjury from './components/emergencies/IllnessInjury';
+import MentalHealth from './components/emergencies/MentalHealth';
+import Substances from './components/emergencies/Substances';
+import CrimeViolence from './components/emergencies/CrimeViolence';
+import Animal from './components/emergencies/Substances';
+import EnvironmentShelter from './components/emergencies/EnvironmentShelter';
 
 export default class App extends Component {
   state = {
@@ -52,9 +58,37 @@ export default class App extends Component {
           <Route
             exact
             path="/categories"
-            render={(routerProps) => (
-              <Categories {...routerProps} />
-            )}
+            render={(routerProps) => <Categories {...routerProps} />}
+          />
+          <Route
+            exact
+            path="/illness-injury"
+            render={(routerProps) => <IllnessInjury {...routerProps} />}
+          />
+          <Route
+            exact
+            path="/mental-health"
+            render={(routerProps) => <MentalHealth {...routerProps} />}
+          />
+          <Route
+            exact
+            path="/substances"
+            render={(routerProps) => <Substances {...routerProps} />}
+          />
+          <Route
+            exact
+            path="/crime-violence"
+            render={(routerProps) => <CrimeViolence {...routerProps} />}
+          />
+          <Route
+            exact
+            path="/environment-shelter"
+            render={(routerProps) => <EnvironmentShelter {...routerProps} />}
+          />
+          <Route
+            exact
+            path="/animal"
+            render={(routerProps) => <Animal {...routerProps} />}
           />
           <Route
             exact

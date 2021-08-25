@@ -25,7 +25,7 @@ export default class ListPage extends Component {
               <h4 className="tags">{resource.tags}</h4>
 
               <section className="resource-address">
-                <p className="street-add">{resource.address}</p>
+                <p className="street-add">{resource.st_address}</p>
                 <p className="city">{resource.city}</p>
                 <p className="zip">{resource.zip}</p>
                 <p className="county">{resource.county}</p>
