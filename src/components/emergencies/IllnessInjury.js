@@ -4,12 +4,12 @@ export default class IllnessInjury extends Component {
   render() {
     return (
       <div>
-        <h2>Illness & Injury</h2>
-        <p>
+        <h1>Illness & Injury</h1>
+        <h2>
           Walk-in Urgent Care clinics and nurse lines for minor illness or
           injury that is NOT life-threatening, but needs same-day medical
           attention.
-        </p>
+        </h2>
       </div>
     );
   }

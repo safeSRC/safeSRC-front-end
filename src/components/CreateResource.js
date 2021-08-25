@@ -5,6 +5,7 @@ import '../style/Create.css';
 export default class CreateResource extends Component {
   state = {
     src_name: '',
+    src_description: '',
     st_address: '',
     city: '',
     city_id: 1,
@@ -23,6 +24,10 @@ export default class CreateResource extends Component {
 
   handleSrcNameChange = (e) => {
     this.setState({ src_name: e.target.value });
+  };
+
+  handleDescriptionChange = (e) => {
+    this.setState({ src_description: e.target.value });
   };
 
   handleStAddressChange = (e) => {
@@ -74,6 +79,7 @@ export default class CreateResource extends Component {
 
     await createResource({
       src_name: this.state.src_name,
+      src_description: this.state.src_description,
       st_address: this.state.st_address,
       city: this.state.city,
       city_id: this.state.city_id,
@@ -100,6 +106,14 @@ export default class CreateResource extends Component {
           <label>
             Name of Business:
             <input onChange={this.handleSrcNameChange} />
+          </label>
+          <label>
+            Description
+            <input
+              value={this.state.src_description}
+              type="text"
+              onChange={this.handleDescriptionChange}
+            />
           </label>
           <label>
             Street Address:

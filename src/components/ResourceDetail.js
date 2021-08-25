@@ -11,6 +11,7 @@ import '../style/Resources.css';
 export default class DetailPage extends Component {
   state = {
     src_name: '',
+    src_description: '',
     st_address: '',
     cities: [],
     city_id: 1,
@@ -35,6 +36,7 @@ export default class DetailPage extends Component {
 
     this.setState({
       src_name: resource.src_name,
+      src_description: resource.src_description,
       st_address: resource.st_address,
       city_id: resource.city_id,
       cities: cities,
@@ -51,8 +53,12 @@ export default class DetailPage extends Component {
     });
   };
 
-  handlesrc_nameChange = (e) => {
+  handleNameChange = (e) => {
     this.setState({ src_name: e.target.value });
+  };
+
+  handleDescriptionChange = (e) => {
+    this.setState({ src_description: e.target.value });
   };
 
   handleStAddressChange = (e) => {
@@ -106,6 +112,7 @@ export default class DetailPage extends Component {
     e.preventDefault();
     await updateResource(this.props.match.params.id, {
       src_name: this.state.src_name,
+      src_description: this.state.src_description,
       st_address: this.state.st_address,
       city: this.state.city,
       city_id: this.state.city_id,
@@ -133,9 +140,17 @@ export default class DetailPage extends Component {
           <label>
             Business Name
             <input
-              value={this.state.name}
+              value={this.state.src_name}
               type="text"
-              onChange={this.handleSrcNameChange}
+              onChange={this.handleNameChange}
+            />
+          </label>
+          <label>
+            Description
+            <input
+              value={this.state.src_description}
+              type="text"
+              onChange={this.handleDescriptionChange}
             />
           </label>
           <label>
