@@ -9,15 +9,15 @@ import {
 import ResourceList from './components/ResourceList.js';
 import ResourceDetail from './components/ResourceDetail.js';
 import CreateResource from './components/CreateResource.js';
-import LandingPage from './components/Home';
-import Signin from './components/Signin';
-import Signup from './components/Signup';
-import Logout from './components/Logout';
-import About from './components/About';
-import UserPage from './components/UserPage';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Categories from './components/Categories';
+import LandingPage from './components/Home.js';
+import Signin from './components/Signin.js';
+import Signup from './components/Signup.js';
+import Logout from './components/Logout.js';
+import About from './components/About.js';
+import UserPage from './components/UserPage.js';
+import Header from './components/Header.js';
+import Footer from './components/Footer.js';
+import Categories from './components/Categories.js';
 
 export default class App extends Component {
   state = {
