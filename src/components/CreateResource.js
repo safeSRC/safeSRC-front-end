@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { createResource } from './utils';
-import './App.css';
+import { createResource } from '../Utils';
+import '../style/Create.css';
 
-export default class CreatePage extends Component {
+export default class CreateResource extends Component {
   state = {
     name: '',
     address: '',
@@ -18,7 +18,7 @@ export default class CreatePage extends Component {
     website: '',
     category: '',
     category_id: 1,
-    subcategory: '',
+    tags: '',
   };
 
   handleNameChange = (e) => {
@@ -65,8 +65,8 @@ export default class CreatePage extends Component {
     this.setState({ category: e.target.value });
   };
 
-  handleSubcategoryChange = (e) => {
-    this.setState({ subcategory: e.target.value });
+  handleTagsChange = (e) => {
+    this.setState({ tags: e.target.value });
   };
 
   handleSubmit = async (e) => {
@@ -87,7 +87,7 @@ export default class CreatePage extends Component {
       website: this.state.website,
       category: this.state.category,
       category_id: this.state.category_id,
-      subcategory: this.state.subcategory,
+      tags: this.state.tags,
     });
 
     this.props.history.push('/');
@@ -147,20 +147,18 @@ export default class CreatePage extends Component {
               value={this.state.value}
               onChange={this.handleCategoryChange}
             >
-              <option value="environmental">Environmental</option>
-              <option value="mentalhealth">Mental Health</option>
-              <option value="substanceuse">Substance Use</option>
-              <option value="domestic">Domestic</option>
-              <option value="animals">Animals</option>
-              <option value="everyday">Everyday</option>
-              <option value="national">National</option>
+              <option value="ill-inj">Illness & Injury</option>
+              <option value="mh">Mental Health</option>
+              <option value="sub">Substances</option>
+              <option value="cv">Crime & Violence</option>
+              <option value="env-shel">Environmental & Shelter</option>
+              <option value="ani">Animal</option>
             </select>
           </label>
           <label>
-            Subcategory:
-            <input type="text" onChange={this.handleSubcategoryChange} />
+            Tags:
+            <input type="text" onChange={this.handleTagsChange} />
           </label>
-          <input type="submit" value="Submit" />
           <button>Submit</button>
         </form>
       </div>

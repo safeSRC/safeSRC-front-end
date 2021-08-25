@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import '../style/Resources.css';
 
-export default class Footer extends Component {
+export default class ResourceItem extends Component {
       render() {
             return (
                   <div>
