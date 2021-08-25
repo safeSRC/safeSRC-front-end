@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
   getAllCities,
-  getAllStates,
   getAllCategories,
   getOneResource,
   updateResource,
@@ -32,7 +31,6 @@ export default class DetailPage extends Component {
     const id = this.props.match.params.id;
     const resource = await getOneResource(id);
     const cities = await getAllCities();
-    const usstates = await getAllStates();
     const categories = await getAllCategories();
 
     this.setState({
@@ -43,7 +41,6 @@ export default class DetailPage extends Component {
       zip: resource.zip,
       county: resource.county,
       state_id: resource.state_id,
-      usstates: usstates,
       number: resource.number,
       altnumber: resource.altnumber,
       email: resource.number,

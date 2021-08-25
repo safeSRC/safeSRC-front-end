@@ -1,6 +1,6 @@
 import request from 'superagent';
 
-const URL = 'https://safesrc.herokuapp.com/';
+const URL = 'https://safesrc1.herokuapp.com/';
 
 export async function signup(name, email, password) {
   const data = await request
@@ -77,19 +77,19 @@ export async function getOneCity(id) {
   return body;
 }
 
-export async function getAllStates() {
-  const { body } = await request
-  .get(`${URL}/states`);
+// export async function getAllStates() {
+//   const { body } = await request
+//   .get(`${URL}/states`);
 
-  return body;
-}
+//   return body;
+// }
 
-export async function getOneState(id) {
-  const { body } = await request
-  .get(`${URL}/states/${id}`);
+// export async function getOneState(id) {
+//   const { body } = await request
+//   .get(`${URL}/states/${id}`);
 
-  return body;
-}
+//   return body;
+// }
 
 export async function getAllCategories() {
   const { body } = await request
