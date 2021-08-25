@@ -6,7 +6,7 @@ import {
   getOneResource,
   updateResource,
   deleteResource,
-} from '../Utils';
+} from '../Utils.js';
 import '../style/Resources.css';
 
 export default class CategoryItem extends Component {
