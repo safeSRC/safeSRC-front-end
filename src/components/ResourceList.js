@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { getAllResources } from './utils';
+import { getAllResources } from '../Utils.js';
 import { Link } from 'react-router-dom';
+import '../style/Resources.css';
 
 export default class ListPage extends Component {
   state = {

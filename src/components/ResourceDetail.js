@@ -6,8 +6,8 @@ import {
   getOneResource,
   updateResource,
   deleteResource,
-} from './utils';
-import './App.css';
+} from '../Utils';
+import '../style/Resources.css';
 
 export default class DetailPage extends Component {
   state = {

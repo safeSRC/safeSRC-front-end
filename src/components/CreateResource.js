@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { createResource } from './utils';
-import './App.css';
+import { createResource } from '../Utils';
+import '../style/Create.css';
 
-export default class CreatePage extends Component {
+export default class CreateResource extends Component {
   state = {
     name: '',
     address: '',
@@ -160,7 +160,6 @@ export default class CreatePage extends Component {
             Subcategory:
             <input type="text" onChange={this.handleSubcategoryChange} />
           </label>
-          <input type="submit" value="Submit" />
           <button>Submit</button>
         </form>
       </div>
