@@ -6,6 +6,7 @@ import '../style/Resources.css';
 export default class ListPage extends Component {
   state = {
     resource: [],
+    
   };
 
   componentDidMount = async () => {
