@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { createResource } from '../Utils.js';
+import { createResource } from '../Fetch-Utils.js';
 import '../style/Create.css';
 
 export default class CreateResource extends Component {
