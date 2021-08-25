@@ -5,7 +5,7 @@ import {
   getOneResource,
   updateResource,
   deleteResource,
-} from '../Fetch-Utils.js';
+} from '../Utils.js';
 import '../style/Resources.css';
 
 export default class DetailPage extends Component {
