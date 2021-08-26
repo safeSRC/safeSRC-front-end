@@ -8,17 +8,14 @@ export default class CreateResource extends Component {
     src_description: '',
     st_address: '',
     city: '',
-    city_id: 1,
     county: '',
     zip: '',
     usstate: '',
-    state_id: 1,
     number: '',
     altnumber: '',
     email: '',
     website: '',
     category: '',
-    category_id: 1,
     tags: '',
   };
 
@@ -76,23 +73,19 @@ export default class CreateResource extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
-
     await createResource({
       src_name: this.state.src_name,
       src_description: this.state.src_description,
       st_address: this.state.st_address,
       city: this.state.city,
-      city_id: this.state.city_id,
-      usstate: this.state.usstate,
       zip: this.state.zip,
       county: this.state.county,
-      state_id: this.state.state_id,
+      usstate: this.state.usstate,
       number: this.state.number,
       altnumber: this.state.altnumber,
       email: this.state.email,
       website: this.state.website,
       category: this.state.category,
-      category_id: this.state.category_id,
       tags: this.state.tags,
     });
 
@@ -105,21 +98,25 @@ export default class CreateResource extends Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Name of Business:
-            <input placeholder="Your Business Name" onChange={this.handleSrcNameChange} />
+          <input
+            className="input-field"
+            placeholder="ex. People First Mental Health Services" onChange={this.handleSrcNameChange} />
           </label>
           <label>
             Description:
             <input
+              className="input-field"
               value={this.state.src_description}
               type="textarea"
               style={{ height: 100 }}
-              placeholder="ex. 24/7 Online chat service with a trained staff member who can provide you confidential crisis support."
+              placeholder="ex. 24/7 crisis line for domestic violence support"
               onChange={this.handleDescriptionChange}
             />
           </label>
           <label>
             Street Address:
             <input
+              className="input-field"
               type="address"
               placeholder="1234 Main St, Ste #12"
               onChange={this.handleStAddressChange}
@@ -128,6 +125,7 @@ export default class CreateResource extends Component {
           <label>
             City:
             <input
+              className="input-field"
               type="text"
               placeholder="Anytown"
               onChange={this.handleCityChange}
@@ -136,6 +134,7 @@ export default class CreateResource extends Component {
           <label>
             Zipcode:
             <input
+              className="input-field"
               type="number"
               maxLength="5"
               placeholder="12345"
@@ -145,6 +144,7 @@ export default class CreateResource extends Component {
           <label>
             County:
             <input
+              className="input-field"
               type="text"
               placeholder="Washington County"
               onChange={this.handleCountyChange}
@@ -153,6 +153,7 @@ export default class CreateResource extends Component {
           <label>
             State:
             <input
+              className="input-field"
               type="text"
               placeholder="OR"
               onChange={this.handleUSStateChange}
@@ -161,6 +162,7 @@ export default class CreateResource extends Component {
           <label>
             Phone number:
             <input
+              className="input-field"
               type="tel"
               placeholder="612-555-1234"
               onChange={this.handleNumberChange}
@@ -169,14 +171,16 @@ export default class CreateResource extends Component {
           <label>
             Alt phone number:
             <input
+              className="input-field"
               type="tel"
-              placeholder="800-555-1234"
+              placeholder="1-800-555-1234"
               onChange={this.handleAltNumberChange}
             />
           </label>
           <label>
             Email:
             <input
+              className="input-field"
               type="email"
               placeholder="contactus@business.org"
               onChange={this.handleEmailChange}
@@ -185,6 +189,7 @@ export default class CreateResource extends Component {
           <label>
             Website:
             <input
+              className="input-field"
               type="url"
               placeholder="http://www.yourwebsite.org"
               onChange={this.handleWebsiteChange}
@@ -207,8 +212,9 @@ export default class CreateResource extends Component {
           <label>
             Tags:
             <input
+              className="input-field"
               type="text"
-              placeholder="'Crisis line', 'Animal Control', 'Homeless Shelter', 'Locksmith', etc."
+              placeholder="ex. 'Crisis line', 'Wildlife Rehab', 'Locksmith', etc."
               onChange={this.handleTagsChange}
             />
           </label>

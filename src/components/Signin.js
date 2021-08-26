@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import { signin } from '../Utils.js';
 import '../style/Sign.css';
+import { Link } from 'react-router-dom';
 
 export default class Signin extends Component {
   state = {
-    display_name: '',
+    username: '',
     email: '',
     password: '',
   };
 
   handleChange = (e) => {
-    const { name, value } = e.target;
-    this.setState({ [name]: value });
+    const { username, value } = e.target;
+    this.setState({ [username]: value });
   };
 
   handleSubmit = async (e) => {
@@ -32,7 +33,7 @@ export default class Signin extends Component {
           <label>
             Email
             <input
-              name="email"
+              className="input-info"
               type="email"
               text="email"
               onChange={this.handleChange}
@@ -41,13 +42,13 @@ export default class Signin extends Component {
           <label>
             Password
             <input
-              name="password"
+              className="input-info"
               type="password"
               text="password"
               onChange={this.handleChange}
             />
           </label>
-          <button>Sign In</button>
+          <button><Link to="/userpage">Sign In</Link></button>
         </form>
       </div>
     );

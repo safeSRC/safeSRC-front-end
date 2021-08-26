@@ -1,265 +1,81 @@
 import React, { Component } from 'react';
-import {
-  getAllCities,
-  getAllCategories,
-  getOneResource,
-  updateResource,
-  deleteResource,
-} from '../Utils.js';
+// import {
+//   filterResources
+// } from '../Utils.js';
 import '../style/Resources.css';
+import divider from '../style/divider.png';
 
 export default class DetailPage extends Component {
   state = {
     src_name: '',
     src_description: '',
     st_address: '',
-    cities: [],
-    city_id: 1,
+    city: '',
     zip: '',
     county: '',
-    usstates: [],
-    state_id: 1,
+    usstate: '',
     number: '',
     altnumber: '',
     email: '',
     website: '',
-    categories: [],
-    category_id: 1,
-    tags: [],
+    category: '',
+    tags: []
   };
 
-  componentDidMount = async () => {
-    const id = this.props.match.params.id;
-    const resource = await getOneResource(id);
-    const cities = await getAllCities();
-    const categories = await getAllCategories();
-
-    this.setState({
-      src_name: resource.src_name,
-      src_description: resource.src_description,
-      st_address: resource.st_address,
-      city_id: resource.city_id,
-      cities: cities,
-      zip: resource.zip,
-      county: resource.county,
-      state_id: resource.state_id,
-      number: resource.number,
-      altnumber: resource.altnumber,
-      email: resource.number,
-      website: resource.website,
-      category_id: resource.category_id,
-      categories: categories,
-      subcategory: resource.subcategory,
-    });
-  };
-
-  handleNameChange = (e) => {
-    this.setState({ src_name: e.target.value });
-  };
-
-  handleDescriptionChange = (e) => {
-    this.setState({ src_description: e.target.value });
-  };
-
-  handleStAddressChange = (e) => {
-    this.setState({ st_address: e.target.value });
-  };
-
-  handleCityChange = (e) => {
-    this.setState({ city: e.target.value });
-  };
-
-  handleZipChange = (e) => {
-    this.setState({ zip: e.target.value });
-  };
-
-  handleCountyChange = (e) => {
-    this.setState({ county: e.target.value });
-  };
-
-  handleUSStateChange = (e) => {
-    this.setState({ usstate: e.target.value });
-  };
-
-  handleNumberChange = (e) => {
-    this.setState({ number: e.target.value });
-  };
-
-  handleAltNumberChange = (e) => {
-    this.setState({ altnumber: e.target.value });
-  };
-
-  handleEmailChange = (e) => {
-    this.setState({ email: e.target.value });
-  };
-
-  handleWebsiteChange = (e) => {
-    this.setState({ website: e.target.value });
-  };
-
-  handleCategoryChange = (e) => {
-    this.setState({ category: e.target.value });
-  };
-
-  handleDelete = (e) => {
-    // this.setState({ gender_id: e.target.reset() });
-    deleteResource(this.props.match.params.id);
-    this.props.history.push('/');
-    window.location.reload();
-  };
-
-  handleSubmit = async (e) => {
+    handleLink = async (e) => {
     e.preventDefault();
-    await updateResource(this.props.match.params.id, {
-      src_name: this.state.src_name,
-      src_description: this.state.src_description,
-      st_address: this.state.st_address,
-      city: this.state.city,
-      city_id: this.state.city_id,
-      zip: this.state.zip,
-      county: this.state.county,
-      usstate: this.state.usstate,
-      state_id: this.state.state_id,
-      number: this.state.number,
-      altnumber: this.state.altnumber,
-      email: this.state.email,
-      website: this.state.website,
-      category: this.state.category,
-      category_id: this.state.category_id,
-      subcategory: this.state.subcategory,
-      owner_id: 1,
-    });
-    this.props.history.push('/');
+    window.location.href = `${this.props.website}`;
   };
+  // componentDidMount = async () => {
+  //   const id = this.props.match.params.id;
+  //   const resource = await getOneResource(id);
+  //   const cities = await getAllCities();
+  //   const categories = await getAllCategories();
+
+  //   this.setState({
+  //     src_name: resource.src_name,
+  //     src_description: resource.src_description,
+  //     st_address: resource.st_address,
+  //     cities: cities,
+  //     zip: resource.zip,
+  //     county: resource.county,
+  //     number: resource.number,
+  //     altnumber: resource.altnumber,
+  //     email: resource.number,
+  //     website: resource.website,
+  //     categories: categories,
+  //     tags: resource.tags
+  //   });
+  // };
+
   render() {
-    console.log(this.state);
+
     return (
       <div className="detail">
-        <h2>Update Resource</h2>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Business Name
-            <input
-              value={this.state.src_name}
-              type="text"
-              onChange={this.handleNameChange}
-            />
-          </label>
-          <label>
-            Description
-            <input
-              value={this.state.src_description}
-              type="textarea"
-              style={{ height: 300 }}
-              onChange={this.handleDescriptionChange}
-            />
-          </label>
-          <label>
-            Street Address
-            <input
-              value={this.state.st_address}
-              type="address"
-              onChange={this.handleStAddressChange}
-            />
-          </label>
-          <label>
-            City
-            <select onChange={this.handleCityChange}>
-              {this.state.cities.map((city) => (
-                <option
-                  selected={city.id === this.state.city_id}
-                  value={city.id}
-                >
-                  {city.city}
-                </option>
-              ))}
-              <option>select</option>
-            </select>
-          </label>
-          <label>
-            Zipcode
-            <input
-              value={this.state.zip}
-              type="number"
-              maxLength="5"
-              onChange={this.handleZipChange}
-            />
-          </label>
-          <label>
-            County
-            <input
-              value={this.state.county}
-              type="county"
-              onChange={this.handleCountyChange}
-            />
-          </label>
-          <label>
-            State
-            <select onChange={this.handleUSStateChange}>
-              {this.state.usstates.map((usstate) => (
-                <option
-                  selected={usstate.id === this.state.state_id}
-                  value={usstate.id}
-                >
-                  {usstate.usstate}
-                </option>
-              ))}
-              <option>select</option>
-            </select>
-          </label>
-          <label>
-            Phone number:
-            <input
-              value={this.state.number}
-              type="tel"
-              onChange={this.handleNumberChange}
-            />
-          </label>
-          <label>
-            Alt phone number:
-            <input
-              value={this.state.altnumber}
-              type="tel"
-              onChange={this.handleAltNumberChange}
-            />
-          </label>
-          <label>
-            Email:
-            <input
-              value={this.state.email}
-              type="email"
-              onChange={this.handleEmailChange}
-            />
-          </label>
-          <label>
-            Website:
-            <input
-              value={this.state.website}
-              type="url"
-              onChange={this.handleWebsiteChange}
-            />
-          </label>
+        <section className="about">
+          <h2 className="biz-name">{this.props.src_name}</h2>
+          <h4 className="tags">{this.props.tags}</h4>
+          <p className="descrip">{this.props.src_description}</p>
+        </section>
 
-          <label>
-            Resource Category
-            <select onChange={this.handleCategoryChange}>
-              {this.state.categories.map((category) => (
-                <option
-                  selected={category.id === this.state.category_id}
-                  value={category.id}
-                >
-                  {category.category}
-                </option>
-              ))}
-              <option>select</option>
-            </select>
-          </label>
-          <button className="update-btn">Update</button>
-        </form>
+        <section className="location">
+          <p className="src-address">{this.props.st_address}</p>
+          <p className="src-address">{this.props.city}, {this.props.zip}</p>
+          <p className="src-address">{this.props.county} County</p>
+          <p className="src-address">{this.props.usstate}</p>
+        </section>
 
-        <button onClick={this.handleDelete} className="delete-btn">
-          Delete
-        </button>
+        <section className="contact-info">
+          <p className="main-phone">Phone Number: {this.props.number}</p>
+          <p className="alt-phone">Alt Phone Number: {this.props.altnumber}</p>
+          <p className="e-contact">Email: {this.props.email}</p>
+          <a href className="web-url" onClick={this.handleLink}>{this.props.website}
+
+          </a>
+        </section>
+        <div className="line">
+          <img className="line-break" src={divider} alt="divider" />
+        </div>
       </div>
     );
   }

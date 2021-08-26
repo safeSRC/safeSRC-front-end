@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  height: 100%;
 }
 
 body {
@@ -8,6 +9,8 @@ body {
   text-align: center;
   background-color: black;
   color: rgb(127, 177, 211);
+  overflow: visible;
+  height: 100%;
 }
 
 .App-logo {

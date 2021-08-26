@@ -1,21 +1,21 @@
 const categories = [
   {
-    category: 'Illness & Injury',
+    category: 'illness-and-injury',
   },
   {
-    category: 'Mental Health',
+    category: 'mental-health',
   },
   {
-    category: 'Substances',
+    category: 'substances',
   },
   {
-    category: 'Crime & Violence',
+    category: 'crime-and-violence',
   },
   {
-    category: 'Environmental & Shelter',
+    category: 'environmental-and-shelter',
   },
   {
-    category: 'Animal',
+    category: 'animal',
   }
 ];
 

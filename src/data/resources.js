@@ -10,7 +10,7 @@ const resources = [
     altnumber: '612-825-3333',
     email: '',
     website: 'https://www.tubman.org/',
-    category: 'Mental Health',
+    category: 'mental-health',
     tags: ['Crisis Line', 'Family', 'Domestic Violence', 'Shelter'],
   },
   {
@@ -24,7 +24,7 @@ const resources = [
     altnumber: '',
     email: 'info@domesticviolenceresourcecenter.org',
     website: 'https://domesticviolenceresourcecenter.org/',
-    category: 'Crime & Violence',
+    category: 'crime-and-violence',
     tags: 'Domestic Violence',
   },
   {
@@ -38,7 +38,7 @@ const resources = [
     altnumber: '',
     email: '',
     website: 'https://www.multcopets.org/',
-    category: 'Animal',
+    category: 'animal',
     tags: 'Animal Control',
   },
   {
@@ -53,7 +53,7 @@ const resources = [
     email: '',
     website:
       'https://www.stpaul.gov/departments/safety-inspections/animal-control-information',
-    category: 'Animal',
+    category: 'animal',
     tags: 'Animal Control',
   },
   {
@@ -67,7 +67,7 @@ const resources = [
     altnumber: '',
     email: 'info@wrcmn.org',
     website: 'https://wrcmn.org/',
-    category: 'Animal',
+    category: 'animal',
     tags: 'Wildlife Rehab',
   },
   {
@@ -82,7 +82,7 @@ const resources = [
     email: '',
     website:
       'https://www.ramseycounty.us/content/urgent-care-adult-mental-health',
-    category: 'Mental Health',
+    category: 'mental-health',
     tags: ['Crisis Line', 'Urgent Care'],
   },
 ];

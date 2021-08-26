@@ -22,13 +22,14 @@ import IllnessInjury from './components/emergencies/IllnessInjury';
 import MentalHealth from './components/emergencies/MentalHealth';
 import Substances from './components/emergencies/Substances';
 import CrimeViolence from './components/emergencies/CrimeViolence';
-import Animal from './components/emergencies/Substances';
+import Animal from './components/emergencies/Animal';
 import EnvironmentShelter from './components/emergencies/EnvironmentShelter';
+import Contribute from './components/Contribute';
 
 export default class App extends Component {
   state = {
     token: localStorage.getItem('TOKEN'),
-    display_name: '',
+    name: '',
   };
 
   signin = (token) => {
@@ -41,8 +42,8 @@ export default class App extends Component {
     localStorage.setItem('TOKEN', '');
   };
 
-  setUserName = (display_name) => {
-    this.setState({ display_name: display_name });
+  setUserName = (name) => {
+    this.setState({ name: name });
   };
 
   render() {
@@ -62,7 +63,7 @@ export default class App extends Component {
           />
           <Route
             exact
-            path="/illness-injury"
+            path="/illness-and-injury"
             render={(routerProps) => <IllnessInjury {...routerProps} />}
           />
           <Route
@@ -77,18 +78,23 @@ export default class App extends Component {
           />
           <Route
             exact
-            path="/crime-violence"
+            path="/crime-and-violence"
             render={(routerProps) => <CrimeViolence {...routerProps} />}
           />
           <Route
             exact
-            path="/environment-shelter"
+            path="/environment-and-shelter"
             render={(routerProps) => <EnvironmentShelter {...routerProps} />}
           />
           <Route
             exact
             path="/animal"
             render={(routerProps) => <Animal {...routerProps} />}
+          />
+          <Route
+            exact
+            path="/contribute"
+            render={(routerProps) => <Contribute {...routerProps} />}
           />
           <Route
             exact
@@ -145,7 +151,7 @@ export default class App extends Component {
                 <UserPage
                   {...routerProps}
                   token_key={this.state.token}
-                  name={this.state.display_name}
+                  name={this.state.name}
                 />
               ) : (
                 <Redirect to="/" />

@@ -1,10 +1,13 @@
 import request from 'superagent';
+// import cities from './data/cities.js';
+// import categories from './data/categories.js';
+import resources from './data/resources.js';
 
 const URL = 'https://safesrc1.herokuapp.com/';
 
 export async function signup(name, email, password) {
   const data = await request.post(`${URL}/auth/signup`).send({
-    display_name: name,
+    name: name,
     email: email,
     password: password,
   });
@@ -73,6 +76,12 @@ export async function getAllCategories() {
 
 export async function getOneCategory(id) {
   const { body } = await request.get(`${URL}/categories/${id}`);
+
+  return body;
+}
+
+export async function filterResources() {
+  const { body } = await request.get(`${URL}/${resources.category}`);
 
   return body;
 }
