@@ -17,9 +17,7 @@ export default class Categories extends Component {
 // }
 
   render() {
-
     return (
-      
       <div className="cats">
         <p className="illness-injury">
           <Link to="/illness-and-injury">

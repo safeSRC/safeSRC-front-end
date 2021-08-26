@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 export default class Contribute extends Component {
       render() {
@@ -13,6 +12,11 @@ export default class Contribute extends Component {
                 <p>
                   <a href="/signin" className="link">
                     Sign In
+                  </a>
+                </p>
+                <p>
+                  <a href="/userpage" className="link">
+                    User Page
                   </a>
                 </p>
                 <p>

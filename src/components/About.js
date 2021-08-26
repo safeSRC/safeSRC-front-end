@@ -7,30 +7,32 @@ export default class About extends Component {
             return (
               <div>
                 <img className="App-logo" src={logo} alt="safeSRC logo" />
-                <section className="ben">
-                  <h1>Ben</h1>
-                  <p className="bio">hi</p>
-                </section>
-                <section className="bri">
-                  <h1>Bri</h1>
-                  <p className="bio">hey</p>
-                </section>
-                <section className="dimitra">
-                  <h1>Dimitra</h1>
-                  <p className="bio">hello</p>
-                </section>
-                <section className="elise">
-                  <h1>Elise</h1>
-                  <p className="bio">henlo</p>
-                </section>
-                <section className="maria">
-                  <h1>Maria</h1>
-                  <p className="bio">heblo</p>
-                </section>
-                <section className="sofia">
-                  <h1>Sofia</h1>
-                  <p className="bio">heldo</p>
-                </section>
+                <div className="us">
+                  <section className="ben">
+                    <h1>Ben</h1>
+                    <p className="bio">hi</p>
+                  </section>
+                  <section className="bri">
+                    <h1>Bri</h1>
+                    <p className="bio">hey</p>
+                  </section>
+                  <section className="dimitra">
+                    <h1>Dimitra</h1>
+                    <p className="bio">hello</p>
+                  </section>
+                  <section className="elise">
+                    <h1>Elise</h1>
+                    <p className="bio">henlo</p>
+                  </section>
+                  <section className="maria">
+                    <h1>Maria</h1>
+                    <p className="bio">heblo</p>
+                  </section>
+                  <section className="sofia">
+                    <h1>Sofia</h1>
+                    <p className="bio">heldo</p>
+                  </section>
+                </div>
               </div>
             );
       }

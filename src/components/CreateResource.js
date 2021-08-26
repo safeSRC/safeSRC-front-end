@@ -103,7 +103,7 @@ export default class CreateResource extends Component {
             Name of Business:
           <input
             className="input-field"
-            placeholder="Your Business Name" onChange={this.handleSrcNameChange} />
+            placeholder="ex. People First Mental Health Services" onChange={this.handleSrcNameChange} />
           </label>
           <label>
             Description:
@@ -112,7 +112,7 @@ export default class CreateResource extends Component {
               value={this.state.src_description}
               type="textarea"
               style={{ height: 100 }}
-              placeholder="ex. 24/7 Online chat service with a trained staff member who can provide you confidential crisis support."
+              placeholder="ex. 24/7 crisis line for domestic violence support"
               onChange={this.handleDescriptionChange}
             />
           </label>
@@ -176,7 +176,7 @@ export default class CreateResource extends Component {
             <input
               className="input-field"
               type="tel"
-              placeholder="800-555-1234"
+              placeholder="1-800-555-1234"
               onChange={this.handleAltNumberChange}
             />
           </label>
@@ -217,7 +217,7 @@ export default class CreateResource extends Component {
             <input
               className="input-field"
               type="text"
-              placeholder="'Crisis line', 'Animal Control', 'Homeless Shelter', 'Locksmith', etc."
+              placeholder="ex. 'Crisis line', 'Wildlife Rehab', 'Locksmith', etc."
               onChange={this.handleTagsChange}
             />
           </label>

@@ -1,12 +1,12 @@
 import request from 'superagent';
-import cities from './data/cities.js';
-import categories from './data/categories.js';
+// import cities from './data/cities.js';
+// import categories from './data/categories.js';
 import resources from './data/resources.js';
 
-// const URL = 'https://safesrc1.herokuapp.com/';
+const URL = 'https://safesrc1.herokuapp.com/';
 
 export async function signup(name, email, password) {
-  const data = await request.post(`/auth/signup`).send({
+  const data = await request.post(`${URL}/auth/signup`).send({
     name: name,
     email: email,
     password: password,
@@ -15,7 +15,7 @@ export async function signup(name, email, password) {
 }
 
 export async function signin(email, password) {
-  const data = await request.post(`/auth/signin`).send({
+  const data = await request.post(`${URL}/auth/signin`).send({
     email: email,
     password: password,
   });
@@ -23,7 +23,7 @@ export async function signin(email, password) {
 }
 
 export async function logout() {
-  const data = await request.get(`/`).send({
+  const data = await request.get(`${URL}/`).send({
     email: '',
     password: '',
   });
@@ -31,63 +31,63 @@ export async function logout() {
 }
 
 export async function createResource(resourceData) {
-  const { body } = await request.post(`/resources`).send(resourceData);
+  const { body } = await request.post(`${URL}/resources`).send(resourceData);
 
   return body;
 }
 
 export async function getAllResources() {
-  const { body } = await request.get(`/resources`);
+  const { body } = await request.get(`${URL}/resources`);
 
   return body;
 }
 
 export async function getOneResource(id) {
-  const { body } = await request.get(`/resources/${id}`);
+  const { body } = await request.get(`${URL}/resources/${id}`);
 
   return body;
 }
 
 export async function updateResource(id, resourceData) {
   const { body } = await request
-    .put(`/resources/${id}`)
+    .put(`${URL}/resources/${id}`)
     .send(resourceData);
 
   return body;
 }
 
 export async function getAllCities() {
-  const { body } = await request.get(`/cities`);
+  const { body } = await request.get(`${URL}/cities`);
 
   return body;
 }
 
 export async function getOneCity(id) {
-  const { body } = await request.get(`/cities/${id}`);
+  const { body } = await request.get(`${URL}/cities/${id}`);
 
   return body;
 }
 
 export async function getAllCategories() {
-  const { body } = await request.get(`/categories`);
+  const { body } = await request.get(`${URL}/categories`);
 
   return body;
 }
 
 export async function getOneCategory(id) {
-  const { body } = await request.get(`/categories/${id}`);
+  const { body } = await request.get(`${URL}/categories/${id}`);
 
   return body;
 }
 
 export async function filterResources() {
-  const { body } = await request.get(`/${resources.category}`);
+  const { body } = await request.get(`${URL}/${resources.category}`);
 
   return body;
 }
 
 export async function deleteResource(id) {
-  const { body } = await request.delete(`/resources/${id}`);
+  const { body } = await request.delete(`${URL}/resources/${id}`);
 
   return body;
 }

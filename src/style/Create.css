@@ -20,9 +20,16 @@ input {
       width: 300px;
       flex-wrap: wrap;
       overflow-wrap: break-word;
-      word-break: break-all;
-      overflow: visible;
       background-color: blanchedalmond;
+      flex-flow: wrap;
+      word-wrap: break-word;
+      text-overflow: unset;
+      font-style: italic;
+}
+
+input::placeholder {
+      flex-wrap:wrap;
+      word-wrap: break-word;
 }
 
 button {
