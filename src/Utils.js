@@ -1,7 +1,7 @@
 import request from 'superagent';
 // import cities from './data/cities.js';
 // import categories from './data/categories.js';
-import resources from './data/resources.js';
+// import resources from './data/resources.js';
 
 const URL = 'https://safesrc.herokuapp.com/';
 // const URL = 'http://localhost:7890/'

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from '../style/logo.png';
 import '../style/Home.css';
-import { Link } from 'react-router-dom';
 import { getResourcesByCityName } from '../Utils';
+// import { Link } from 'react-router-dom';
 
 export default class Home extends Component {
 
