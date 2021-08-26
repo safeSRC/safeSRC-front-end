@@ -9,6 +9,8 @@ export default class Home extends Component {
   state = {
     input: '',
     resources: [],
+    message: '',
+    city: '',
   }
 
   handleSubmit = async (e) => {
@@ -16,6 +18,12 @@ export default class Home extends Component {
     console.log(this.state.input);
     const res = await getResourcesByCityName(this.state.input);
     console.log(res);
+    if (res.resources) {
+      this.setState({ resources: res.resources, city: res.city.city });
+    } else {
+      this.setState({ message: res.message, resources: [], city: ''})
+    }
+
     // this.props.history.push('/resources');
     // const resourcesAPI = await getResources()
   }
@@ -38,7 +46,8 @@ export default class Home extends Component {
             Search
           </button>
         </form>
-        <p className="paragraph">
+        <div>{this.state.resources.length ? this.state.resources.map((resource) => <h1>{(resource.src_name)}</h1>) : this.state.message}</div>
+        <p className="paragraph" id="results">
           A safer, community-based alternative to calling the police in
           emergency situations.
         </p>
