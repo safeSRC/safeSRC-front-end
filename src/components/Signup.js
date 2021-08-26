@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { signup } from '../Utils.js';
 import '../style/Sign.css';
+import { Link } from 'react-router-dom';
 
 export default class Signup extends Component {
   state = {
-    display_name: '',
+    name: '',
     email: '',
     password: '',
   };
@@ -12,14 +13,14 @@ export default class Signup extends Component {
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
-    this.props.setUserName(this.state.display_name);
+    this.props.setUserName(this.state.name);
   };
 
   handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const token = await signup(
-        this.state.display_name,
+        this.state.name,
         this.state.email,
         this.state.password
       );
@@ -36,18 +37,19 @@ export default class Signup extends Component {
         <div className="Nav">
           <form onSubmit={this.handleSubmit}>
             <label>
-              Name
+              Username
               <input
-                name="display_name"
-                type="text"
-                value={this.state.display_name}
+                name="name"
+                className="input-info"
+                type="name"
+                value={this.state.name}
                 onChange={this.handleChange}
               />
             </label>
             <label>
               Email
               <input
-                name="email"
+                className="input-info"
                 type="email"
                 text="email"
                 onChange={this.handleChange}
@@ -56,13 +58,13 @@ export default class Signup extends Component {
             <label>
               Password
               <input
-                name="password"
+                className="input-info"
                 type="password"
                 text="password"
                 onChange={this.handleChange}
               />
             </label>
-            <button>Sign Up</button>
+            <button><Link to="/userpage">Sign Up</Link></button>
           </form>
         </div>
       </div>

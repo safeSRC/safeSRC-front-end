@@ -7,30 +7,30 @@ export default class About extends Component {
             return (
               <div>
                 <img className="App-logo" src={logo} alt="safeSRC logo" />
-                <p className="ben">
+                <section className="ben">
                   <h1>Ben</h1>
                   <p className="bio">hi</p>
-                </p>
-                <p className="bri">
+                </section>
+                <section className="bri">
                   <h1>Bri</h1>
                   <p className="bio">hey</p>
-                </p>
-                <p className="dimitra">
+                </section>
+                <section className="dimitra">
                   <h1>Dimitra</h1>
                   <p className="bio">hello</p>
-                </p>
-                <p className="elise">
+                </section>
+                <section className="elise">
                   <h1>Elise</h1>
                   <p className="bio">henlo</p>
-                </p>
-                <p className="maria">
+                </section>
+                <section className="maria">
                   <h1>Maria</h1>
                   <p className="bio">heblo</p>
-                </p>
-                <p className="sofia">
+                </section>
+                <section className="sofia">
                   <h1>Sofia</h1>
                   <p className="bio">heldo</p>
-                </p>
+                </section>
               </div>
             );
       }

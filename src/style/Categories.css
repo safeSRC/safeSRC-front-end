@@ -1,0 +1,79 @@
+.illness-injury {
+      background-color: darkred;
+      color: black;
+      border-radius: 15px;
+}
+
+.ill-inj-btn {
+      background-color: crimson;
+}
+
+.mental-health {
+      background-color: orangered;
+      color: black;
+      border-radius: 15px;
+}
+
+.mh-btn {
+      background-color: orange;
+}
+
+.substances {
+      background-color: gold;
+      color: black;
+      border-radius: 15px;
+}
+
+.sub-btn {
+      background-color: yellow;
+}
+
+.crime-violence {
+      background-color: green;
+      color: grey;
+      border-radius: 15px;
+}
+
+.cv-btn {
+      background-color: chartreuse;
+}
+
+.environ-shelt {
+      background-color: blue;
+      color: grey;
+      border-radius: 15px;
+}
+
+.env-shel-btn {
+      background-color:deepskyblue;
+}
+
+.animal {
+      background-color: purple;
+      color: black;
+      border-radius: 15px;
+}
+.ani-btn {
+      background-color:mediumpurple;
+}
+
+.ill-inj-btn, .mh-btn, .sub-btn, .cv-btn, .env-shel-btn, .ani-btn  {
+      width: 90%;
+      height: 3em;
+      font-size: 20px;
+      border: 3px double black;
+      border-radius: 20px;
+      cursor: pointer;
+}
+
+.examples {
+      font-size: .8rem;
+      padding: 5px;
+      font-weight: bold;
+      font-style: italic;
+}
+
+.cats {
+      margin-left: 10px;
+      margin-right: 10px;
+}

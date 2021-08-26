@@ -24,7 +24,6 @@ export default class Home extends Component {
     return (
       <div>
         <img className="App-logo" src={logo} alt="safeSRC logo" />
-        <h1>SafeSRC</h1>
         <form>
           <label>
             <input placeholder="Enter city" />
