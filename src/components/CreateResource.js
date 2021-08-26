@@ -78,17 +78,14 @@ export default class CreateResource extends Component {
       src_description: this.state.src_description,
       st_address: this.state.st_address,
       city: this.state.city,
-      city_id: this.state.city_id,
-      usstate: this.state.usstate,
       zip: this.state.zip,
       county: this.state.county,
-      state_id: this.state.state_id,
+      usstate: this.state.usstate,
       number: this.state.number,
       altnumber: this.state.altnumber,
       email: this.state.email,
       website: this.state.website,
       category: this.state.category,
-      category_id: this.state.category_id,
       tags: this.state.tags,
     });
 

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import {
-  filterResources
-} from '../Utils.js';
+// import {
+//   filterResources
+// } from '../Utils.js';
 import '../style/Resources.css';
+import divider from '../style/divider.png';
 
 export default class DetailPage extends Component {
   state = {
@@ -12,7 +13,7 @@ export default class DetailPage extends Component {
     city: '',
     zip: '',
     county: '',
-    usstates: '',
+    usstate: '',
     number: '',
     altnumber: '',
     email: '',
@@ -21,6 +22,10 @@ export default class DetailPage extends Component {
     tags: []
   };
 
+    handleLink = async (e) => {
+    e.preventDefault();
+    window.location.href = `${this.props.website}`;
+  };
   // componentDidMount = async () => {
   //   const id = this.props.match.params.id;
   //   const resource = await getOneResource(id);
@@ -54,19 +59,23 @@ export default class DetailPage extends Component {
         </section>
 
         <section className="location">
-          <p className="src-address">Street Address: {this.props.st_address}</p>
-          <p className="src-address">City: {this.props.city}</p>
-          <p className="src-address">Zipcode: {this.props.zip}</p>
-          <p className="src-address">County: {this.props.county}</p>
-          <p className="src-address">State: {this.props.usstate}</p>
+          <p className="src-address">{this.props.st_address}</p>
+          <p className="src-address">{this.props.city}, {this.props.zip}</p>
+          <p className="src-address">{this.props.county} County</p>
+          <p className="src-address">{this.props.usstate}</p>
         </section>
 
         <section className="contact-info">
           <p className="main-phone">Phone Number: {this.props.number}</p>
           <p className="alt-phone">Alt Phone Number: {this.props.altnumber}</p>
-          <p className="e-contact">Email: {this.props.number}</p>
-          <p className="web-url">Website: {this.props.website}</p>
+          <p className="e-contact">Email: {this.props.email}</p>
+          <a href className="web-url" onClick={this.handleLink}>{this.props.website}
+
+          </a>
         </section>
+        <div className="line">
+          <img className="line-break" src={divider} alt="divider" />
+        </div>
       </div>
     );
   }

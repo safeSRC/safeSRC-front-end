@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ResourceDetail from '../ResourceDetail.js';
 import resources from '../../data/resources.js';
+import '../../style/Resources.css';
 
 export default class Substances extends Component {
   state = {
@@ -22,14 +23,14 @@ export default class Substances extends Component {
     if (this.state.filteredCategories) {
       subsrc = resources.filter(
         (subsrc) =>
-          subsrc.category === +this.state.filteredCategories
+          subsrc.category === this.state.filteredCategories
       );
     }
 
     return (
       <div>
-        <h1>Substance Abuse</h1>
-        <h2>
+        <h1 className="cat-title">Substance Abuse</h1>
+        <h2 className="cat-desc">
           Poison control, emergency overdose services (narcan, suboxone, etc.),
           substance abuse resources, clean needle share and needle disposal
           locations
@@ -44,7 +45,7 @@ export default class Substances extends Component {
               city={subsrc.city}
               zip={subsrc.zip}
               county={subsrc.county}
-              state={subsrc.state}
+              usstate={subsrc.usstate}
               number={subsrc.number}
               altnumber={subsrc.altnumber}
               email={subsrc.email}

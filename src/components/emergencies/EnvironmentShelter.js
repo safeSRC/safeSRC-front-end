@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ResourceDetail from '../ResourceDetail.js';
 import resources from '../../data/resources.js';
+import '../../style/Resources.css';
 
 export default class EnvironmentShelter extends Component {
   state = {
@@ -21,14 +22,14 @@ export default class EnvironmentShelter extends Component {
 
     if (this.state.filteredCategories) {
       enviroshelsrc = resources.filter(
-        enviroshelsrc => enviroshelsrc.category === +this.state.filteredCategories
+        enviroshelsrc => enviroshelsrc.category === this.state.filteredCategories
       );
     }
 
             return (
               <div>
-                <h1>Environmental/Housing</h1>
-                <h2>
+                <h1 className="cat-title">Environmental/Housing</h1>
+                <h2 className="cat-desc">
                   Homeless shelters, emergency housing resources,
                   warming/cooling shelters, storm shelters, severe weather
                   services, outage maps, locksmiths for lockouts, roadside
@@ -44,7 +45,7 @@ export default class EnvironmentShelter extends Component {
                       city={enviroshelsrc.city}
                       zip={enviroshelsrc.zip}
                       county={enviroshelsrc.county}
-                      state={enviroshelsrc.state}
+                      usstate={enviroshelsrc.usstate}
                       number={enviroshelsrc.number}
                       altnumber={enviroshelsrc.altnumber}
                       email={enviroshelsrc.email}

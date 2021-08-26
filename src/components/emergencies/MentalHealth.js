@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ResourceDetail from '../ResourceDetail.js';
 import resources from '../../data/resources.js';
+import '../../style/Resources.css';
 
 export default class MentalHealth extends Component {
   state = {
@@ -22,14 +23,14 @@ export default class MentalHealth extends Component {
     if (this.state.filteredCategories) {
       mhsrc = resources.filter(
         (mhsrc) =>
-          mhsrc.category === +this.state.filteredCategories
+          mhsrc.category === this.state.filteredCategories
       );
     }
 
     return (
       <div>
-        <h1>Mental Health</h1>
-        <h2>
+        <h1 className="cat-title">Mental Health</h1>
+        <h2 className="cat-desc">
           Crisis text/phone/chat-lines, suicide prevention, hospitalization
           services, walk-in programs, wellness checks, same-day therapy
           resources
@@ -44,7 +45,7 @@ export default class MentalHealth extends Component {
               city={mhsrc.city}
               zip={mhsrc.zip}
               county={mhsrc.county}
-              state={mhsrc.state}
+              usstate={mhsrc.usstate}
               number={mhsrc.number}
               altnumber={mhsrc.altnumber}
               email={mhsrc.email}

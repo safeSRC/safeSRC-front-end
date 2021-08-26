@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ResourceDetail from '../ResourceDetail.js';
 import resources from '../../data/resources.js';
+import '../../style/Resources.css';
 
 export default class CrimeViolence extends Component {
   state = {
@@ -21,14 +22,14 @@ export default class CrimeViolence extends Component {
 
     if (this.state.filteredCategories) {
       crimviosrc = resources.filter(
-        crimviosrc => crimviosrc.category === +this.state.filteredCategories
+        crimviosrc => crimviosrc.category === this.state.filteredCategories
       );
     }
 
     return (
       <div>
-        <h1>Crime & Violence</h1>
-        <h2>
+        <h1 className="cat-title">Crime & Violence</h1>
+        <h2 className="cat-desc">
           Sexual and domestic assault crisis lines and shelters, child
           protection services, crisis lines/shelters/resources for abuse
           (including specified resources for LGBTQ*, disabled, elderly, minor,
@@ -46,7 +47,7 @@ export default class CrimeViolence extends Component {
               city={crimviosrc.city}
               zip={crimviosrc.zip}
               county={crimviosrc.county}
-              state={crimviosrc.state}
+              usstate={crimviosrc.usstate}
               number={crimviosrc.number}
               altnumber={crimviosrc.altnumber}
               email={crimviosrc.email}

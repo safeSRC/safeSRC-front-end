@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ResourceDetail from '../ResourceDetail.js';
 import resources from '../../data/resources.js';
+import '../../style/Resources.css';
 
 export default class IllnessInjury extends Component {
     state = {
@@ -21,14 +22,14 @@ export default class IllnessInjury extends Component {
 
     if (this.state.filteredCategories) {
       illinjsrc = resources.filter(
-        illinjsrc => illinjsrc.category === +this.state.filteredCategories
+        illinjsrc => illinjsrc.category === this.state.filteredCategories
       );
     }
 
     return (
       <div>
-        <h1>Illness & Injury</h1>
-        <h2>
+        <h1 className="cat-title">Illness & Injury</h1>
+        <h2 className="cat-desc">
           Walk-in Urgent Care clinics and nurse lines for minor illness or
           injury that is NOT life-threatening, but needs same-day medical
           attention.
@@ -44,7 +45,7 @@ export default class IllnessInjury extends Component {
               city={illinjsrc.city}
               zip={illinjsrc.zip}
               county={illinjsrc.county}
-              state={illinjsrc.state}
+              usstate={illinjsrc.usstate}
               number={illinjsrc.number}
               altnumber={illinjsrc.altnumber}
               email={illinjsrc.email}

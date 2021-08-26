@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import resources from '../../data/resources.js';
 import ResourceDetail from '../ResourceDetail.js';
+import '../../style/Resources.css';
 
 export default class Animal extends Component {
   state = {
@@ -22,14 +23,14 @@ export default class Animal extends Component {
 
         if (this.state.filteredCategories) {
           animalsrc = resources.filter(
-            animalsrc => animalsrc.category === +this.state.filteredCategories
+            animalsrc => animalsrc.category === this.state.filteredCategories
           );
         }
 
     return (
       <div>
-        <h1>Animal</h1>
-        <h2>
+        <h1 className="cat-title">Animal</h1>
+        <h2 className="cat-desc">
           Emergency vet clinics, after-hours clinics, animal control, wildlife
           rehabilitation centers, animal shelters, lost/found pet animalsrc
         </h2>
@@ -43,7 +44,7 @@ export default class Animal extends Component {
               city={animalsrc.city}
               zip={animalsrc.zip}
               county={animalsrc.county}
-              state={animalsrc.state}
+              usstate={animalsrc.usstate}
               number={animalsrc.number}
               altnumber={animalsrc.altnumber}
               email={animalsrc.email}
