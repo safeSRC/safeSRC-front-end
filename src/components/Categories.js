@@ -19,6 +19,11 @@ export default class Categories extends Component {
   render() {
     return (
       <div className="cats">
+        <br></br> <br></br>
+        <p className="emergency-logo">
+          WHAT IS YOUR EMERGENCY?
+        </p>
+        <br></br> 
         <p className="illness-injury">
           <Link to="/illness-and-injury">
             <button className="ill-inj-btn">

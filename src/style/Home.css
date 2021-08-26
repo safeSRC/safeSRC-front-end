@@ -12,7 +12,7 @@ body {
 }
 
 .App-logo {
-  height: 30vmin;
+  size: 30vmin;
   pointer-events: none;
   margin-top: 20px;
 }
@@ -34,4 +34,10 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+.paragraph {
+  text-align: center;
+  font-size: 5vmin;
+  color: goldenrod;
 }
