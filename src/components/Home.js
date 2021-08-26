@@ -46,7 +46,13 @@ export default class Home extends Component {
             Search
           </button>
         </form>
-        <div>{this.state.resources.length ? this.state.resources.map((resource) => <h1>{(resource.src_name)}</h1>) : this.state.message}</div>
+        <div>{this.state.resources.length ? this.state.resources.map((resource) => 
+        <div>
+          <h1>{(resource.src_name)}</h1>
+          <p>{resource.src_description}</p>
+          <p>{resource.info}</p>
+        </div>) : this.state.message}
+        </div>
         <p className="paragraph" id="results">
           A safer, community-based alternative to calling the police in
           emergency situations.
