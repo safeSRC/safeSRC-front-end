@@ -28,11 +28,11 @@ export default class Home extends Component {
           <label>
             <input placeholder="Enter city" />
           </label>
-          <button onSubmit={this.handleSubmit}>
+          <button className="search-button" onSubmit={this.handleSubmit}>
             <Link to="/categories">Search</Link>
           </button>
         </form>
-        <p>
+        <p className="paragraph">
           A safer, community-based alternative to calling the police in
           emergency situations.
         </p>

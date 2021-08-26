@@ -1,60 +1,95 @@
 .illness-injury {
-      background-color: darkred;
-      color: black;
+      background-color: rgb(94, 19, 19);
+      color: rgb(255, 255, 255);
       border-radius: 15px;
 }
 
+/* .illness-injury:hover {
+      background-color: rgb(194, 21, 21);
+      color: white;
+} */
+
 .ill-inj-btn {
+      background-color: rgb(155, 44, 66);
+}
+
+.ill-inj-btn:hover {
       background-color: crimson;
+      color: white;
 }
 
 .mental-health {
-      background-color: orangered;
-      color: black;
+      background-color: rgb(185, 79, 40);
+      color: rgb(255, 255, 255);
       border-radius: 15px;
 }
 
 .mh-btn {
+      background-color: rgb(165, 122, 44);
+}
+
+.mh-btn:hover {
       background-color: orange;
+      color: white;
 }
 
 .substances {
-      background-color: gold;
-      color: black;
+      background-color: rgb(146, 131, 44);
+      color: rgb(255, 255, 255);
       border-radius: 15px;
 }
 
 .sub-btn {
-      background-color: yellow;
+      background-color: rgb(158, 158, 47);
+}
+
+.sub-btn:hover {
+      background-color: rgb(206, 206, 27);
+      color: white;
 }
 
 .crime-violence {
-      background-color: green;
-      color: grey;
+      background-color: rgb(21, 82, 21);
+      color: rgb(255, 255, 255);
       border-radius: 15px;
 }
 
 .cv-btn {
-      background-color: chartreuse;
+      background-color: rgb(110, 161, 58);
+}
+
+.cv-btn:hover {
+      background-color: rgb(30, 211, 24);
+      color: white;
 }
 
 .environ-shelt {
-      background-color: blue;
-      color: grey;
+      background-color: rgb(62, 62, 126);
+      color: rgb(255, 255, 255);
       border-radius: 15px;
 }
 
 .env-shel-btn {
-      background-color:deepskyblue;
+      background-color:rgb(55, 144, 173);
+}
+
+.env-shel-btn:hover {
+      background-color:rgb(29, 56, 207);
+      color: white;
 }
 
 .animal {
-      background-color: purple;
-      color: black;
+      background-color: rgb(80, 24, 80);
+      color: rgb(255, 255, 255);
       border-radius: 15px;
 }
 .ani-btn {
-      background-color:mediumpurple;
+      background-color:rgb(116, 99, 150);
+}
+
+.ani-btn:hover {
+      background-color:rgb(101, 68, 167);
+      color: white;
 }
 
 .illness-injury, .mental-health, .substances, .crime-violence, .environ-shelt, .animal  {
@@ -67,10 +102,14 @@
       width: 90%;
       height: 2em;
       font-size: 4vmin;
-      border: 3px double black;
+      border: 3px double rgba(0, 0, 0, 0.555);
       border-radius: 20px;
       cursor: pointer;
       margin: -7px;
+}
+
+.ill-inj-btn, .mh-btn, .sub-btn, .cv-btn, .env-shel-btn, .ani-btn:hover {
+      cursor: pointer;
 }
 
 .examples {
@@ -78,6 +117,7 @@
       padding: 5px;
       font-weight: bold;
       font-style: italic;
+      opacity: 0.8;
 }
 
 .cats {
@@ -85,4 +125,14 @@
       margin-right: 10px;
       margin-bottom: -50px;
       margin-top: -20px;
+}
+
+.emergency-logo {
+      height: 5vmin;
+      font-weight: bold;
+      background-color: red;
+      color: white;
+      text-align: center;
+      font-size: 3vmin;
+      border-radius: 20px;
 }
