@@ -66,9 +66,9 @@ export default class DetailPage extends Component {
         </section>
 
         <section className="contact-info">
-          <p className="main-phone">Phone Number: {this.props.number}</p>
-          <p className="alt-phone">Alt Phone Number: {this.props.altnumber}</p>
-          <p className="e-contact">Email: {this.props.email}</p>
+          <p className="main-phone">Phone Numbers: {this.props.number}</p>
+          <p className="alt-phone">{this.props.altnumber}</p>
+          <p className="e-contact">{this.props.email}</p>
           <a href className="web-url" onClick={this.handleLink}>{this.props.website}
 
           </a>

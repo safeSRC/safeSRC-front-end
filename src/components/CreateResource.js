@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { createResource } from '../Utils.js';
 import '../style/Create.css';
+import Tags from './Tags.js';
 
 export default class CreateResource extends Component {
   state = {
@@ -98,9 +99,11 @@ export default class CreateResource extends Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Name of Business:
-          <input
-            className="input-field"
-            placeholder="ex. People First Mental Health Services" onChange={this.handleSrcNameChange} />
+            <input
+              className="input-field"
+              placeholder="ex. People First Mental Health Services"
+              onChange={this.handleSrcNameChange}
+            />
           </label>
           <label>
             Description:
@@ -210,14 +213,21 @@ export default class CreateResource extends Component {
             </select>
           </label>
           <label>
-            Tags:
-            <input
-              className="input-field"
-              type="text"
-              placeholder="ex. 'Crisis line', 'Wildlife Rehab', 'Locksmith', etc."
-              onChange={this.handleTagsChange}
-            />
+            Subcategory:
+            <select
+              value={this.state.value}
+              onChange={this.handleCategoryChange}
+            >
+              <option value="ill-inj">Illness & Injury</option>
+              <option value="mh">Mental Health</option>
+              <option value="sub">Substances</option>
+              <option value="cv">Crime & Violence</option>
+              <option value="env-shel">Environmental & Shelter</option>
+              <option value="ani">Animal</option>
+            </select>
           </label>
+          <h4>Tags:</h4>
+          <Tags />
           <button>Submit</button>
         </form>
       </div>
