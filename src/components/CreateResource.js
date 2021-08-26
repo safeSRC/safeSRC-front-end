@@ -105,55 +105,90 @@ export default class CreateResource extends Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Name of Business:
-            <input onChange={this.handleSrcNameChange} />
+            <input placeholder="Your Business Name" onChange={this.handleSrcNameChange} />
           </label>
           <label>
-            Description
+            Description:
             <input
               value={this.state.src_description}
-              type="text"
+              type="textarea"
+              style={{ height: 100 }}
+              placeholder="ex. 24/7 Online chat service with a trained staff member who can provide you confidential crisis support."
               onChange={this.handleDescriptionChange}
             />
           </label>
           <label>
             Street Address:
-            <input type="address" onChange={this.handleStAddressChange} />
+            <input
+              type="address"
+              placeholder="1234 Main St, Ste #12"
+              onChange={this.handleStAddressChange}
+            />
           </label>
           <label>
             City:
-            <input type="text" onChange={this.handleCityChange} />
+            <input
+              type="text"
+              placeholder="Anytown"
+              onChange={this.handleCityChange}
+            />
           </label>
           <label>
             Zipcode:
             <input
               type="number"
               maxLength="5"
+              placeholder="12345"
               onChange={this.handleZipChange}
             />
           </label>
           <label>
             County:
-            <input type="text" onChange={this.handleCountyChange} />
+            <input
+              type="text"
+              placeholder="Washington County"
+              onChange={this.handleCountyChange}
+            />
           </label>
           <label>
             State:
-            <input type="text" onChange={this.handleUSStateChange} />
+            <input
+              type="text"
+              placeholder="OR"
+              onChange={this.handleUSStateChange}
+            />
           </label>
           <label>
             Phone number:
-            <input type="tel" onChange={this.handleNumberChange} />
+            <input
+              type="tel"
+              placeholder="612-555-1234"
+              onChange={this.handleNumberChange}
+            />
           </label>
           <label>
             Alt phone number:
-            <input type="tel" onChange={this.handleAltNumberChange} />
+            <input
+              type="tel"
+              placeholder="800-555-1234"
+              onChange={this.handleAltNumberChange}
+            />
           </label>
           <label>
             Email:
-            <input type="email" onChange={this.handleEmailChange} />
+            <input
+              type="email"
+              placeholder="contactus@business.org"
+              onChange={this.handleEmailChange}
+            />
           </label>
           <label>
             Website:
-            <input type="url" onChange={this.handleWebsiteChange} />
+            <input
+              type="url"
+              placeholder="http://www.yourwebsite.org"
+              onChange={this.handleWebsiteChange}
+            />
           </label>
           <label>
             Category of Emergency:
@@ -171,7 +206,11 @@ export default class CreateResource extends Component {
           </label>
           <label>
             Tags:
-            <input type="text" onChange={this.handleTagsChange} />
+            <input
+              type="text"
+              placeholder="'Crisis line', 'Animal Control', 'Homeless Shelter', 'Locksmith', etc."
+              onChange={this.handleTagsChange}
+            />
           </label>
           <button>Submit</button>
         </form>

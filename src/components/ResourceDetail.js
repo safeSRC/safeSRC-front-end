@@ -149,7 +149,8 @@ export default class DetailPage extends Component {
             Description
             <input
               value={this.state.src_description}
-              type="text"
+              type="textarea"
+              style={{ height: 300 }}
               onChange={this.handleDescriptionChange}
             />
           </label>
