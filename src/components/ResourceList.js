@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { getAllResources } from '../Utils.js';
 import { Link } from 'react-router-dom';
 import '../style/Resources.css';
-import resources from '../data/resources.js';
+// import resources from '../data/resources.js';
 
 export default class ListPage extends Component {
   state = {
