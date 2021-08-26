@@ -34,7 +34,7 @@ export default class Home extends Component {
         </form>
         <p>
           A safer, community-based alternative to calling the police in
-          emergency situations
+          emergency situations.
         </p>
       </div>
     );

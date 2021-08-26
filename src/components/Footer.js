@@ -10,7 +10,7 @@ export default class Footer extends Component {
   render() {
     return (
       <div>
-        <p className="footer">
+        <section className="footer">
           <p>
             <a href="/about" className="nav-link">
               About safeSRC
@@ -36,7 +36,7 @@ export default class Footer extends Component {
               Escape Website
             </button>
           </p>
-        </p>
+        </section>
       </div>
     );
   }

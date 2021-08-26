@@ -22,7 +22,7 @@ import IllnessInjury from './components/emergencies/IllnessInjury';
 import MentalHealth from './components/emergencies/MentalHealth';
 import Substances from './components/emergencies/Substances';
 import CrimeViolence from './components/emergencies/CrimeViolence';
-import Animal from './components/emergencies/Substances';
+import Animal from './components/emergencies/Animal';
 import EnvironmentShelter from './components/emergencies/EnvironmentShelter';
 import Contribute from './components/Contribute';
 
