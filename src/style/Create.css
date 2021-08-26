@@ -17,13 +17,12 @@ form {
 
 input {
       margin: 5px;
-      width: 300px;
+      width: 30vmin;
       flex-wrap: wrap;
       overflow-wrap: break-word;
       background-color: blanchedalmond;
       flex-flow: wrap;
       word-wrap: break-word;
-      text-overflow: unset;
       font-style: italic;
 }
 
