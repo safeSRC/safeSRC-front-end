@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from '../style/logo.png';
 import '../style/Home.css';
 import { Link } from 'react-router-dom';
+import { getResourcesByCityName } from '../Utils';
 
 export default class Home extends Component {
 
@@ -12,7 +13,10 @@ export default class Home extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
-    this.props.history.push('/categories');
+    console.log(this.state.input);
+    const res = await getResourcesByCityName(this.state.input);
+    console.log(res);
+    // this.props.history.push('/resources');
     // const resourcesAPI = await getResources()
   }
 
@@ -20,16 +24,18 @@ export default class Home extends Component {
     this.setState({ input: e.target.value })
   }
 
+
+
   render() {
     return (
       <div>
         <img className="App-logo" src={logo} alt="safeSRC logo" />
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label>
-            <input placeholder="Enter city" />
+            <input onChange={this.handleInputChange} value={this.state.input} placeholder="Enter city" />
           </label>
-          <button className="search-button" onSubmit={this.handleSubmit}>
-            <Link to="/categories">Search</Link>
+          <button type="submit" className="search-button">
+            Search
           </button>
         </form>
         <p className="paragraph">
