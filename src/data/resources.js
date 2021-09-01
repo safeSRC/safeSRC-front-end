@@ -87,4 +87,4 @@ const resources = [
   },
 ];
 
-export default resources
+export default resources;

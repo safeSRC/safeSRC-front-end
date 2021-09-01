@@ -4,7 +4,7 @@ import resources from '../../data/resources.js';
 import '../../style/Resources.css';
 
 export default class IllnessInjury extends Component {
-    state = {
+  state = {
     filteredCategories: 'illness-and-injury',
     filteredCities: '',
   };
@@ -22,20 +22,20 @@ export default class IllnessInjury extends Component {
 
     if (this.state.filteredCategories) {
       illinjsrc = resources.filter(
-        illinjsrc => illinjsrc.category === this.state.filteredCategories
+        (illinjsrc) => illinjsrc.category === this.state.filteredCategories
       );
     }
 
     return (
       <div>
-        <h1 className="cat-title">Illness & Injury</h1>
-        <h2 className="cat-desc">
+        <h1 className='cat-title'>Illness & Injury</h1>
+        <h2 className='cat-desc'>
           Walk-in Urgent Care clinics and nurse lines for minor illness or
           injury that is NOT life-threatening, but needs same-day medical
           attention.
         </h2>
         <section>{resources.src_name}</section>
-        <section className="infodump">
+        <section className='infodump'>
           {illinjsrc.map((illinjsrc, i) => (
             <ResourceDetail
               src_name={illinjsrc.src_name}

@@ -1,3 +1,4 @@
+/* Remove this file? */
 // import React, { Component } from 'react';
 // import { createResource } from '../Utils.js';
 // import '../style/Create.css';

@@ -18,13 +18,13 @@ import UserPage from './components/UserPage.js';
 import Header from './components/Header.js';
 import Footer from './components/Footer.js';
 import Categories from './components/Categories.js';
+import Contribute from './components/Contribute';
 import IllnessInjury from './components/emergencies/IllnessInjury';
 import MentalHealth from './components/emergencies/MentalHealth';
 import Substances from './components/emergencies/Substances';
 import CrimeViolence from './components/emergencies/CrimeViolence';
 import Animal from './components/emergencies/Animal';
 import EnvironmentShelter from './components/emergencies/EnvironmentShelter';
-import Contribute from './components/Contribute';
 
 export default class App extends Component {
   state = {
@@ -61,6 +61,21 @@ export default class App extends Component {
             path="/categories"
             render={(routerProps) => <Categories {...routerProps} />}
           />
+          {/*
+            Each of the /emergencies components could be combined into a single component (eg. <Category />), then by using a route param (such as /categories/:categoryId) you could have the <Category /> component
+            dynamically render.
+
+              <Route
+                path="/categories/:categoryId"
+                render={(routerProps) => <Category {...routerProps} />}
+              />
+
+            Then <Category /> would have something like the following
+            to get the current category id (and fetch it from the backend):
+              
+              let { categoryId } = useParams();
+
+          */}
           <Route
             exact
             path="/illness-and-injury"

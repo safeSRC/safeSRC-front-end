@@ -22,14 +22,14 @@ export default class CrimeViolence extends Component {
 
     if (this.state.filteredCategories) {
       crimviosrc = resources.filter(
-        crimviosrc => crimviosrc.category === this.state.filteredCategories
+        (crimviosrc) => crimviosrc.category === this.state.filteredCategories
       );
     }
 
     return (
       <div>
-        <h1 className="cat-title">Crime & Violence</h1>
-        <h2 className="cat-desc">
+        <h1 className='cat-title'>Crime & Violence</h1>
+        <h2 className='cat-desc'>
           Sexual and domestic assault crisis lines and shelters, child
           protection services, crisis lines/shelters/resources for abuse
           (including specified resources for LGBTQ*, disabled, elderly, minor,
@@ -37,7 +37,7 @@ export default class CrimeViolence extends Component {
           meeting with police after an assault, safe houses, robbery/theft
           reporting
         </h2>
-        <section className="infodump">
+        <section className='infodump'>
           {crimviosrc.map((crimviosrc, i) => (
             <ResourceDetail
               src_name={crimviosrc.src_name}

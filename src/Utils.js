@@ -1,3 +1,4 @@
+/* Lots of commented code in this file that could be cleaned up */
 import request from 'superagent';
 // import cities from './data/cities.js';
 // import categories from './data/categories.js';
@@ -13,19 +14,19 @@ export async function getAllResources() {
 
 export async function getOneResource(id) {
   const { body } = await request.get(`${URL}api/v1/resources/${id}`);
-  
+
   return body;
 }
 
 export async function getOneCity(id) {
   const { body } = await request.get(`${URL}api/v1/cities/${id}`);
-  
+
   return body;
 }
 
 export async function getResourcesByCityName(name) {
   const { body } = await request.get(`${URL}api/v1/cities/search/${name}`);
-  
+
   return body;
 }
 
@@ -60,43 +61,40 @@ export async function getResourcesByCityName(name) {
 //   return body;
 // }
 
-
 // export async function updateResource(id, resourceData) {
-  //   const { body } = await request
-  //     .put(`${URL}/resources/${id}`)
+//   const { body } = await request
+//     .put(`${URL}/resources/${id}`)
 //     .send(resourceData);
 
 //   return body;
 // }
 
 // export async function getAllCities() {
-  //   const { body } = await request.get(`${URL}/cities`);
-  
+//   const { body } = await request.get(`${URL}/cities`);
+
 //   return body;
 // }
 
-
 // export async function getAllCategories() {
-  //   const { body } = await request.get(`${URL}/categories`);
-  
-  //   return body;
+//   const { body } = await request.get(`${URL}/categories`);
+
+//   return body;
 // }
 
 // export async function getOneCategory(id) {
-  //   const { body } = await request.get(`${URL}/categories/${id}`);
-  
+//   const { body } = await request.get(`${URL}/categories/${id}`);
+
 //   return body;
 // }
 
 // export async function filterResources() {
-  //   const { body } = await request.get(`${URL}/${resources.category}`);
-  
+//   const { body } = await request.get(`${URL}/${resources.category}`);
+
 //   return body;
 // }
 
 // export async function deleteResource(id) {
-  //   const { body } = await request.delete(`${URL}/resources/${id}`);
-  
+//   const { body } = await request.delete(`${URL}/resources/${id}`);
+
 //   return body;
 // }
-

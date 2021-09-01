@@ -11,26 +11,26 @@ export default class ListPage extends Component {
 
   componentDidMount = async () => {
     const resourceslist = await getAllResources();
-    this.setState({resources: resourceslist});
+    this.setState({ resources: resourceslist });
   };
 
   render() {
     return (
-      <div className="resourceslist">
-        {this.state.resources.map(resources => 
+      <div className='resourceslist'>
+        {this.state.resources.map((resources) => (
           <Link key={resources.id} to={`/resources/${resources.id}`}>
-            <div className="resources-info">
-              <h2 className="name">{resources.src_name}</h2>
-              <h3 className="category">{resources.category}</h3>
-              <h4 className="tags">{resources.tags}</h4>
-              <p className="description">{resources.src_description}</p>
-              <section className="resources-address">
-                <p className="info">{resources.info}</p>
-                <p className="city">{resources.city}</p>
+            <div className='resources-info'>
+              <h2 className='name'>{resources.src_name}</h2>
+              <h3 className='category'>{resources.category}</h3>
+              <h4 className='tags'>{resources.tags}</h4>
+              <p className='description'>{resources.src_description}</p>
+              <section className='resources-address'>
+                <p className='info'>{resources.info}</p>
+                <p className='city'>{resources.city}</p>
               </section>
             </div>
           </Link>
-        )}
+        ))}
       </div>
     );
   }

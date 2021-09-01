@@ -1,63 +1,62 @@
 body {
-      bottom: 0;
+  bottom: 0;
 }
 
 #root {
-      display: grid;
-      /* grid-template-columns: 100px 1fr 100px; */
-      grid-template-rows: 100px 1fr 100px;
-      width: 100%;
-      bottom: 0;
+  display: grid;
+  /* grid-template-columns: 100px 1fr 100px; */
+  grid-template-rows: 100px 1fr 100px;
+  width: 100%;
+  bottom: 0;
 }
 
 .footer {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-end;
-      text-align: right;
-      color: rgb(50, 28, 192);
-      font-style: italic;
-      font-size: 15px;
-      text-shadow: 5px 5px 10px rgb(4, 38, 67);
-      background-color: rgba(31, 25, 25, 0.822);
-      height: 45px;
-      bottom: 0;
-      margin-bottom: 0;
-      padding: 15px 10px 0px 10px;
-      position: fixed;
-      width: 95%;
-      border-color: goldenrod;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: right;
+  color: rgb(50, 28, 192);
+  font-style: italic;
+  font-size: 15px;
+  text-shadow: 5px 5px 10px rgb(4, 38, 67);
+  background-color: rgba(31, 25, 25, 0.822);
+  height: 45px;
+  bottom: 0;
+  margin-bottom: 0;
+  padding: 15px 10px 0px 10px;
+  position: fixed;
+  width: 95%;
+  border-color: goldenrod;
 }
 /* rgba(68, 60, 68, 0.591); */
 .nav-link {
-      font-size: 10px;
-      color: goldenrod;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  font-size: 10px;
+  color: goldenrod;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .nav-link:hover {
-      color: darkred;
-      cursor: pointer;
+  color: darkred;
+  cursor: pointer;
 }
 
 .escape-btn {
-      background-color: goldenrod;
-      cursor: pointer;
-      border-radius: 20px;
-      padding: 5px;
-      border: 5px double rgb(96, 3, 3);
-      font-size: 8px;
-      max-height: 40px;
-      margin-top: 5px;
-      margin-right: 10px;
-      font-weight: bold;
+  background-color: goldenrod;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 5px;
+  border: 5px double rgb(96, 3, 3);
+  font-size: 8px;
+  max-height: 40px;
+  margin-top: 5px;
+  margin-right: 10px;
+  font-weight: bold;
 }
 
-
 .escape-btn:hover {
-      background-color: crimson;
-      color: yellow;
+  background-color: crimson;
+  color: yellow;
 }
