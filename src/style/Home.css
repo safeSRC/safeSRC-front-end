@@ -9,17 +9,21 @@ body {
   background-color: black;
   color: rgb(127, 177, 211);
   overflow: visible;
+  margin: 10px;
 }
 
 .App-logo {
-  size: 30vmin;
+  height: 30vmin;
   pointer-events: none;
-  margin-top: 20px;
+  margin: 20px;
+  padding: 5px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 30s linear;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 }
 
@@ -32,7 +36,7 @@ body {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(300deg);
   }
 }
 

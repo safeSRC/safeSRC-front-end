@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import logo from '../style/logo.png';
 import '../style/Home.css';
 import { getResourcesByCityName } from '../Utils';
-// import { Link } from 'react-router-dom';
 
 export default class Home extends Component {
 
@@ -23,16 +22,11 @@ export default class Home extends Component {
     } else {
       this.setState({ message: res.message, resources: [], city: ''})
     }
-
-    // this.props.history.push('/resources');
-    // const resourcesAPI = await getResources()
   }
 
   handleInputChange = async (e) => {
     this.setState({ input: e.target.value })
   }
-
-
 
   render() {
     return (
