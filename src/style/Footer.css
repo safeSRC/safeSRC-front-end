@@ -4,7 +4,6 @@ body {
 
 #root {
       display: grid;
-      /* grid-template-columns: 100px 1fr 100px; */
       grid-template-rows: 100px 1fr 100px;
       width: 100%;
       bottom: 0;
@@ -29,7 +28,7 @@ body {
       width: 100%;
       border-color: goldenrod;
 }
-/* rgba(68, 60, 68, 0.591); */
+
 .nav-link {
       font-size: 10px;
       color: goldenrod;
@@ -55,7 +54,6 @@ body {
       margin-right: 10px;
       font-weight: bold;
 }
-
 
 .escape-btn:hover {
       background-color: crimson;
