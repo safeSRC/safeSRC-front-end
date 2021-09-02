@@ -13,20 +13,8 @@ export async function getOneResource(id) {
   return body;
 }
 
-export async function getOneCity(id) {
-  const { body } = await request.get(`${URL}api/v1/cities/${id}`);
-  
-  return body;
-}
-
 export async function getResourcesByCityName(name) {
   const { body } = await request.get(`${URL}api/v1/cities/search/${name}`);
-  
-  return body;
-}
 
-export async function getAllCities() {
-    const { body } = await request.get(`${URL}/cities`);
-  
   return body;
 }
