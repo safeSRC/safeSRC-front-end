@@ -16,7 +16,7 @@ const categories = [
   },
   {
     category: 'animal',
-  }
+  },
 ];
 
 export default categories;

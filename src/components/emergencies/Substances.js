@@ -22,20 +22,19 @@ export default class Substances extends Component {
 
     if (this.state.filteredCategories) {
       subsrc = resources.filter(
-        (subsrc) =>
-          subsrc.category === this.state.filteredCategories
+        (subsrc) => subsrc.category === this.state.filteredCategories
       );
     }
 
     return (
       <div>
-        <h1 className="cat-title">Substance Abuse</h1>
-        <h2 className="cat-desc">
+        <h1 className='cat-title'>Substance Abuse</h1>
+        <h2 className='cat-desc'>
           Poison control, emergency overdose services (narcan, suboxone, etc.),
           substance abuse resources, clean needle share and needle disposal
           locations
         </h2>
-        <section className="infodump">
+        <section className='infodump'>
           {subsrc.map((subsrc, i) => (
             <ResourceDetail
               src_name={subsrc.src_name}

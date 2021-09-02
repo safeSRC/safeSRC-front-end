@@ -1,19 +1,19 @@
 .user-page {
-      display: grid;
-      align-items: center;
-      justify-items: center;
-      margin: 10px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  margin: 10px;
 }
 
 .my-stuff {
-      display: flex;
-      align-items: center;
-      justify-items: center;
-      border: 5px double grey;
-      border-radius: 20px;
-      margin: 10px;
-      width: 70%;
-      text-align: center;
-      padding: 5px;
-      font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  border: 5px double grey;
+  border-radius: 20px;
+  margin: 10px;
+  width: 70%;
+  text-align: center;
+  padding: 5px;
+  font-size: 10px;
 }

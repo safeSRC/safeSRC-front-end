@@ -1,9 +1,9 @@
 .App-name {
-      height: 75px;
-      border: none;
-      padding: none;
-      margin: none;
-      box-shadow: 10px 10px 15px 25px rgba(0, 0, 0, 0.94);
+  height: 75px;
+  border: none;
+  padding: none;
+  margin: none;
+  box-shadow: 10px 10px 15px 25px rgba(0, 0, 0, 0.94);
 }
 
 .App-name:hover {
@@ -15,9 +15,11 @@
 
 @keyframes glow {
   from {
-    box-shadow: 0 0 10px rgb(0, 0, 0), 0 0 20px rgb(0, 0, 0), 0 0 30px #0f0209, 0 0 40px #260515, 0 0 50px #5e0530, 0 0 60px #d50000, 0 0 70px #ff0080;
+    box-shadow: 0 0 10px rgb(0, 0, 0), 0 0 20px rgb(0, 0, 0), 0 0 30px #0f0209,
+      0 0 40px #260515, 0 0 50px #5e0530, 0 0 60px #d50000, 0 0 70px #ff0080;
   }
   to {
-    box-shadow: 0 0 20px rgb(0, 0, 0), 0 0 30px #1f0412, 0 0 40px #1b0711, 0 0 50px #0e0779, 0 0 60px #091fc6, 0 0 70px #001eff, 0 0 80px #0749ff;
+    box-shadow: 0 0 20px rgb(0, 0, 0), 0 0 30px #1f0412, 0 0 40px #1b0711,
+      0 0 50px #0e0779, 0 0 60px #091fc6, 0 0 70px #001eff, 0 0 80px #0749ff;
   }
 }

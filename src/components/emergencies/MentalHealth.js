@@ -22,20 +22,19 @@ export default class MentalHealth extends Component {
 
     if (this.state.filteredCategories) {
       mhsrc = resources.filter(
-        (mhsrc) =>
-          mhsrc.category === this.state.filteredCategories
+        (mhsrc) => mhsrc.category === this.state.filteredCategories
       );
     }
 
     return (
       <div>
-        <h1 className="cat-title">Mental Health</h1>
-        <h2 className="cat-desc">
+        <h1 className='cat-title'>Mental Health</h1>
+        <h2 className='cat-desc'>
           Crisis text/phone/chat-lines, suicide prevention, hospitalization
           services, walk-in programs, wellness checks, same-day therapy
           resources
         </h2>
-        <section className="infodump">
+        <section className='infodump'>
           {mhsrc.map((mhsrc, i) => (
             <ResourceDetail
               src_name={mhsrc.src_name}

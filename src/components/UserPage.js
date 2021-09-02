@@ -7,12 +7,12 @@ import resources from '../data/resources.js';
 class UserPage extends Component {
   render() {
     return (
-      <div className="user-page">
+      <div className='user-page'>
         <p>Welcome, {this.props.name}!</p>
-        <p className="home"></p>
+        <p className='home'></p>
         <h3>Your Stuff</h3>
         <br></br>
-        <section className="my-stuff">
+        <section className='my-stuff'>
           <ResourceDetail
             src_name={resources.src_name}
             tags={resources.tags}
@@ -30,7 +30,7 @@ class UserPage extends Component {
         </section>
         <br></br>
         <section>
-          <Link to="/create">Add Resource</Link>
+          <Link to='/create'>Add Resource</Link>
         </section>
       </div>
     );

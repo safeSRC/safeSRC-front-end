@@ -1,45 +1,45 @@
 .cat-title {
-      color: darkred;
-      text-shadow: 5px 5px 15px navy;
+  color: darkred;
+  text-shadow: 5px 5px 15px navy;
 }
 
 .cat-desc {
-      font-style: italic;
-      color: goldenrod;
-      font-size: 15px;
+  font-style: italic;
+  color: goldenrod;
+  font-size: 15px;
 }
 
 .infodump {
-      border: 3px double green;
-      margin: 15px;
-      border-radius: 20px;
-      color: rgb(83, 135, 59);
+  border: 3px double green;
+  margin: 15px;
+  border-radius: 20px;
+  color: rgb(83, 135, 59);
 }
 
 .line-break {
-      height: 20vmin;
+  height: 20vmin;
 }
 
 .biz-name {
-      color: goldenrod;
-      font-size: 25px;
+  color: goldenrod;
+  font-size: 25px;
 }
 
 .tags {
-      display: flex;
-      flex-direction: column;
-      padding: 5px;
-      margin: 5px;
-      border: 1px solid blue;
-      text-align: center;
-      width: max-content;
-      align-items: center;
-      justify-content: center;
-      color: rgb(145, 137, 88);
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid blue;
+  text-align: center;
+  width: max-content;
+  align-items: center;
+  justify-content: center;
+  color: rgb(145, 137, 88);
 }
 
 .web-url {
-      cursor: pointer;
-      text-decoration: underline;
-      color: rgb(76, 76, 238);
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(76, 76, 238);
 }

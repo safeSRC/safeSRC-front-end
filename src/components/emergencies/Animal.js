@@ -18,23 +18,22 @@ export default class Animal extends Component {
   };
 
   render() {
+    let animalsrc = resources;
 
-        let animalsrc = resources;
-
-        if (this.state.filteredCategories) {
-          animalsrc = resources.filter(
-            animalsrc => animalsrc.category === this.state.filteredCategories
-          );
-        }
+    if (this.state.filteredCategories) {
+      animalsrc = resources.filter(
+        (animalsrc) => animalsrc.category === this.state.filteredCategories
+      );
+    }
 
     return (
       <div>
-        <h1 className="cat-title">Animal</h1>
-        <h2 className="cat-desc">
+        <h1 className='cat-title'>Animal</h1>
+        <h2 className='cat-desc'>
           Emergency vet clinics, after-hours clinics, animal control, wildlife
           rehabilitation centers, animal shelters, lost/found pet animalsrc
         </h2>
-        <section className="infodump">
+        <section className='infodump'>
           {animalsrc.map((animalsrc, i) => (
             <ResourceDetail
               src_name={animalsrc.src_name}
