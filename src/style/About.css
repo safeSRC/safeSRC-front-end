@@ -2,4 +2,43 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr;
+      font-size: 2vmin;
+      padding: 10px;
+      margin: 5px;
+}
+
+.bio {
+      border: 1px solid gray;
+      border-radius: 20px;
+      padding: 10px;
+      margin: 10px;
+}
+
+.ben {
+      color: rgb(187, 15, 15);
+}
+
+.bri {
+      color: rgb(153, 214, 66);
+}
+
+.dimitra {
+      color: rgb(51, 187, 147);
+}
+
+.elise {
+      color: rgb(193, 91, 3);
+}
+
+.maria {
+      color: gold;
+}
+
+.sofia {
+      color: rgb(118, 63, 118);
+}
+
+.li-logo, .gh-logo {
+      height: 25px;
+      padding: 10px;
 }
